@@ -21,7 +21,7 @@ public class ProductoController {
 		
 		
 		model.addAttribute("productos", pServ.getAll());
-		model.addAttribute("promedio", pServ.costoPromedio());
+		model.addAttribute("promedio", pServ.calcularCostoPromedio());
 		
 		return "productos";
 	}

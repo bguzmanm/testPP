@@ -9,5 +9,7 @@ public interface ProductoService {
 	public List<Producto> getAll();
 	public Producto getOne(int id);
 	public void guardarProducto(Producto p);
+	public double calcularCostoPromedio();
+	
 	
 }

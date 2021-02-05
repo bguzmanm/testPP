@@ -33,18 +33,17 @@ public class ProductoServiceImpl implements ProductoService {
 		
 		pRepo.save(p);
 	}
-	
-	public double costoPromedio() {
-		
+
+
+	@Override
+	public double calcularCostoPromedio() {
 		List<Producto> prods = pRepo.findAll();
-		
-		double sumatoria = 0;
+		double total = 0;
 		for (Producto producto : prods) {
-			sumatoria += producto.getStandard_cost();
+			total += producto.getStandard_cost();
 		}
 		
-		return (sumatoria / prods.size());
-		
+		return (total / prods.size());
 	}
 	
 }
